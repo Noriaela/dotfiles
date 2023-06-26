@@ -1,2 +1,2 @@
 # dotfiles
-dotfiles for linux [arch and void]
+dotfiles for arch
