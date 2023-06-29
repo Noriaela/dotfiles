@@ -1,0 +1,23 @@
+#!/bin/bash
+
+dir="$HOME/.config/rofi/launchers/type-1"
+theme='style-1'
+
+
+# options to be displayed
+option0="screen"
+option1="area"
+option2="window"
+
+# options to be displyed
+options="$option0\n$option1\n$option2"
+
+selected="$(echo -e "$options" | rofi -show drun -theme ${dir}/${theme}.rasi "scrot")"
+case $selected in
+    $option0)
+        cd ~/Documents/screenshots/ && sleep 1 && scrot;;
+    $option1)
+        cd ~/Documents/screenshots/ && scrot -s;;
+    $option2)
+        cd ~/Documents/screenshots/ && sleep 1 && scrot -u;;
+esac
