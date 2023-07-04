@@ -28,7 +28,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
 
 # Start Wallpaper
-exec --no-startup-id feh --bg-scale $HOME/.config/wallpapers/anime.png
+exec --no-startup-id feh --bg-scale $HOME/.config/wallpapers/9\ -\ rmcOdYP.jpg
 
 # Start dunst [notifications]
 exec --no-startup-id dunst
@@ -51,7 +51,7 @@ bindsym XF86AudioPrev exec playerctl previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec --no-startup-id urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -168,5 +168,5 @@ bindsym $mod+r mode "resize"
 
 # Colors related stuff
 
-client.focused 		#FF30C4 #FF30C4 #FFFFFF #FF30C4   #FF30C4
+client.focused 		#f08989 #f08989 #FFFFFF #f08989   #f08989
 

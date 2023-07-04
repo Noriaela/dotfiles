@@ -1,0 +1,7 @@
+[module/spotify]
+type = custom/script
+format-padding = 1
+format-prefix = %{T2}Spotify %{T-}
+format-prefix-foreground = ${colors.fg-alt}
+exec = $HOME/.config/polybar/scripts/player-mpris-tail.py -f '{artist} - {title}'
+tail = true

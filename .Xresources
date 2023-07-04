@@ -1,0 +1,54 @@
+!Tokyonight Xresource palette
+*.background: #000000
+*.foreground: #c0caf5
+
+
+!cursor #c0caf5
+
+! normal
+*.color0: #15161E
+*.color1: #f7768e
+*.color2: #9ece6a
+*.color3: #e0af68
+*.color4: #7aa2f7
+*.color5: #bb9af7
+*.color6: #7dcfff
+*.color7: #a9b1d6
+
+! bright
+*.color8: #414868
+*.color9: #f7768e
+*.color10: #9ece6a
+*.color11: #e0af68
+*.color12: #7aa2f7
+*.color13: #bb9af7
+*.color14: #7dcfff
+*.color15: #c0caf5
+
+! extended colors
+*.color16: #ff9e64
+*.color17: #db4b4b
+
+! XTerm Shite
+XTerm*renderFont: true
+XTerm*selectToClipboard: true
+XTerm*faceName: Hack Nerd Font Mono
+XTerm*faceSize: 12
+XTerm*coldMode: true
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+
+! URxvt Shite
+URxvt*font: xft:Hack Nerd Font Mono:size=12
+URxvt*selectToClipboard: true
+URxvt*keysym.BackSpace: \177
+URxvt*ptyInitialErase: 0x7f
+URxvt.keysym.M-Down:        \033[1;3B 
+URxvt.keysym.M-Up:          \033[1;3A 
+URxvt.keysym.M-Left:        \033[1;3D 
+URxvt.keysym.M-Right:       \033[1;3C
+URxvt.keysym.Control-Up:   \033[1;5A 
+URxvt.keysym.Control-Down:    \033[1;5B 
+URxvt.keysym.Control-Left:    \033[1;5D 
+URxvt.keysym.Control-Right:    \033[1;5C
+URxvt.scrollBar: false
