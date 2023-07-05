@@ -65,6 +65,9 @@ bindsym $mod+Return exec --no-startup-id urxvt
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# Suspend/Lock
+bindsym $mod+l exec --no-startup-id playerctl pause && betterlockscreen --lock dimblur 
+
 # Application Launcher
 bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-4/launcher.sh 
 
