@@ -41,20 +41,25 @@ exec --no-startup-id noisetorch -i
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Launch Picom
-exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
+exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf
 
 # Start Wallpaper
-exec --no-startup-id feh --bg-scale $HOME/.config/wallpapers/9\ -\ rmcOdYP.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/.config/wallpapers/9\ -\ rmcOdYP.jpg
 
 # Start dunst [notifications]
-exec --no-startup-id dunst
+exec_always --no-startup-id dunst 
+
+# Startup Apps that i use
+exec --no-startup-id discord
+exec --no-startup-id spotify
+exec --no-startup-id telegram-desktop
 
 # Use playerctl to pause, play, skip, prev
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPause exec playerctl play-pause
-bindsym XF86AudioStop exec playerctl stop
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous 
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPause exec --no-startup-idplayerctl play-pause
+bindsym XF86AudioStop exec --no-startup-idplayerctl stop
+bindsym XF86AudioNext exec --no-startup-idplayerctl next
+bindsym XF86AudioPrev exec --no-startup-idplayerctl previous 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -69,11 +74,11 @@ bindsym $mod+Shift+q kill
 bindsym $mod+l exec --no-startup-id playerctl pause && betterlockscreen --lock dimblur 
 
 # Application Launcher
-bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-4/launcher.sh 
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/launcher.sh 
 
 # Screenshot with Maim
-bindsym Ctrl+Print exec --no-startup-id path="$HOME/Documents/screenshots/$(date +%s).png" && maim -s "$path" && xclip -selection clipboard -t image/png "$path"
-bindsym Print exec --no-startup-id path="$HOME/Documents/screenshots/$(date +%s).png" && maim "$path" && xclip -selection clipboard -t image/png "$path"
+bindsym Ctrl+Print exec --no-startup-id $HOME/.config/dunst/scripts/selection_ss.sh
+bindsym Print exec --no-startup-id $HOME/.config/dunst/scripts/desktop_ss.sh
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -110,8 +115,14 @@ bindsym $mod+space focus mode_toggle
 # I want these floating at launch
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Thunar"] floating enable
+for_window [class="Lutris"] floating enable
+for_window [class="battle.net.exe"] floating enable
+for_window [class="CurseForge"] floating enable
 
 assign [class="Spotify"] $ws4
+assign [class="discord"] $ws3
+assign [class="TelegramDesktop"] $ws3
+assign [class="Lutris"] $ws2
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -142,7 +153,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+shift+e exec --no-startup-id ~/.config/rofi/powermenu/type-1/powermenu.sh
+bindsym $mod+shift+e exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
