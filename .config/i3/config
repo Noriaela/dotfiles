@@ -118,11 +118,18 @@ for_window [class="Thunar"] floating enable
 for_window [class="Lutris"] floating enable
 for_window [class="battle.net.exe"] floating enable
 for_window [class="CurseForge"] floating enable
+for_window [class="steam"] floating enable
+for_window [class="steam" title="^Steam$"] floating disable
 
+# Laucnh these on specific workspaces
 assign [class="Spotify"] $ws4
 assign [class="discord"] $ws3
 assign [class="TelegramDesktop"] $ws3
 assign [class="Lutris"] $ws2
+assign [class="steam"] $ws2
+assign [class="MultiMC"] $ws2
+# launches anything with Minecraft* on ws2
+assign [title="^Minecraft*"] $ws2
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
