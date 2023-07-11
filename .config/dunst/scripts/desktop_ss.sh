@@ -6,18 +6,8 @@ save_dir="$HOME/Documents/screenshots"
 # Create the directory if it doesn't exist
 mkdir -p "$save_dir"
 
-# Set the screenshot sound file path
-screenshot_sound="$HOME/.config/dunst/scripts/sound/captured.wav"
-
-# Set the screenshot sound volume (0.0 - 1.0)
-#screenshot_sound_volume=0.5
-
 # Capture the screenshot using maim
 screenshot_path="$save_dir/screenshot.png"
-
-# Play the sound before capturing the screenshot
-#paplay --volume="$screenshot_sound_volume" "$screenshot_sound"
-paplay "$screenshot_sound"
 
 # Capture the screenshot
 maim "$screenshot_path"
