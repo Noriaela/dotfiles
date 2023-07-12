@@ -2,9 +2,6 @@
 *.background: #000000
 *.foreground: #c0caf5
 
-
-!cursor #c0caf5
-
 ! normal
 *.color0: #15161E
 *.color1: #f7768e
