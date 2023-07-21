@@ -7,7 +7,7 @@ save_dir="$HOME/Documents/screenshots"
 mkdir -p "$save_dir"
 
 # Capture the screenshot using maim
-screenshot_path="$save_dir/screenshot.png"
+screenshot_path="$save_dir/$(date +%s).png"
 
 # Capture the screenshot
 maim -s "$screenshot_path"
