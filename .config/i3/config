@@ -44,7 +44,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf
 
 # Start Wallpaper
-exec_always --no-startup-id feh --bg-scale $HOME/.config/wallpapers/power.png
+exec_always --no-startup-id feh --bg-scale $HOME/.config/wallpapers/power.jpg
 
 # Start dunst [notifications]
 exec_always --no-startup-id dunst 
