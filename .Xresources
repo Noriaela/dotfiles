@@ -1,30 +1,39 @@
-!Tokyonight Xresource palette
-*.background: #000000
-*.foreground: #c0caf5
+! special
+*.foreground:   #ffffff
+*.background:	#000000
+*.cursorColor:  #ffffff
 
-! normal
-*.color0: #15161E
-*.color1: #f7768e
-*.color2: #9ece6a
-*.color3: #e0af68
-*.color4: #7aa2f7
-*.color5: #bb9af7
-*.color6: #7dcfff
-*.color7: #a9b1d6
+! black
+*.color0:       #222222
+*.color8:       #333333
 
-! bright
-*.color8: #414868
-*.color9: #f7768e
-*.color10: #9ece6a
-*.color11: #e0af68
-*.color12: #7aa2f7
-*.color13: #bb9af7
-*.color14: #7dcfff
-*.color15: #c0caf5
+! red
+*.color1:       #601809
+*.color9:       #601809
 
-! extended colors
-*.color16: #ff9e64
-*.color17: #db4b4b
+! green
+*.color2:       #883322
+*.color10:      #883322
+
+! yellow
+*.color3:       #ab5341
+*.color11:      #ab5341
+
+! blue
+*.color4:       #d18170
+*.color12:      #d18170
+
+! magenta
+*.color5:       #ab5341
+*.color13:      #ab5341
+
+! cyan
+*.color6:       #883322
+*.color14:      #883322
+
+! white
+*.color7:       #ffffff
+*.color15:      #ffffff
 
 ! XTerm Shite
 XTerm*renderFont: true
