@@ -1,0 +1,16 @@
+/**
+ *
+ * Author : Harley
+ * Github : @Noriaela
+ * 
+ * Colors
+ **/
+
+* {
+    background:     #291e1eFF;
+    background-alt: #322828FF;
+    foreground:     #FFFFFfFF;
+    selected:       #f99393FF;
+    active:         #fa5050FF;
+    urgent:         #FF5555FF;
+}
