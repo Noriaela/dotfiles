@@ -44,7 +44,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf
 
 # Start Wallpaper
-exec_always --no-startup-id feh --bg-scale $HOME/.config/wallpapers/9\ -\ rmcOdYP.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/.config/wallpapers/power.png
 
 # Start dunst [notifications]
 exec_always --no-startup-id dunst 
@@ -71,10 +71,10 @@ bindsym $mod+Return exec --no-startup-id urxvt
 bindsym $mod+Shift+q kill
 
 # Suspend/Lock
-bindsym $mod+l exec --no-startup-id playerctl pause && betterlockscreen --lock dimblur 
+bindsym $mod+l exec --no-startup-id playerctl pause && betterlockscreen --lock 
 
 # Application Launcher
-bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/launcher.sh 
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launcher/launcher.sh 
 
 # Screenshot with Maim
 bindsym Ctrl+Print exec --no-startup-id $HOME/.config/dunst/scripts/selection_ss.sh
@@ -120,8 +120,9 @@ for_window [class="battle.net.exe"] floating enable
 for_window [class="CurseForge"] floating enable
 for_window [class="steam"] floating enable
 for_window [class="steam" title="^Steam$"] floating disable
+for_window [class="Yad" title="yad-calendar"] floating enable
 
-# Laucnh these on specific workspaces
+# Launch these on specific workspaces
 assign [class="Spotify"] $ws4
 assign [class="discord"] $ws3
 assign [class="TelegramDesktop"] $ws3
@@ -191,5 +192,4 @@ bindsym $mod+r mode "resize"
 
 # Colors related stuff
 
-client.focused 		#f08989 #f08989 #FFFFFF #f08989   #f08989
-
+client.focused 		#660b03 #660b03 #FFFFFF #660b03   #660b03
